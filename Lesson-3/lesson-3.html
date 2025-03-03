@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3 - Strings</title>
+</head>
+<body>
+    <h1>Challenge Exercises</h1>
+</body>
+<script>
+    let bastketball_price = 20.95; 
+    let basketball_quantity = 2;
+    let shipping_cost = 4.99;
+    let t_shirt_price = 7.99;
+    let t_shirt_quantity = 2;
+
+    var total = Math.round(((bastketball_price * basketball_quantity) + (t_shirt_price * t_shirt_quantity)) * 100) / 100;
+    
+
+    let total_quantity = basketball_quantity + t_shirt_quantity
+
+    // Challenge 3k 
+    output = `Items (${total_quantity}):                 $${total}`;
+    
+    console.log(output);
+
+    // Challenge 3l
+    shipping_cost = shipping_cost * 2;
+    output = `Shipping & handling:                  $${shipping_cost}`;
+    
+    console.log(output);
+
+    // Challenge 3m
+    total = total + shipping_cost;
+    output = `Total before tax:                  $${total}`;
+    
+    console.log(output);
+
+    // Challenge 3n
+    tax = 10 / 100;
+    total_tax = (total * tax).toFixed(2);
+    output = `Estimated tax (10%):                  $${total_tax}`;
+    
+    console.log(output);
+
+    // Challenge 3o
+    total = total + Number(total_tax);
+    output = `Order total:                  $${total}`;
+    
+    console.log(output);
+</script>
+</html>
