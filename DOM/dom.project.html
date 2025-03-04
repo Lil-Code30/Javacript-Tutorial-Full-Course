@@ -10,6 +10,7 @@
         }
         span{
             font-weight: bold;
+            color: red;
         }
     </style>
 </head>
@@ -25,7 +26,22 @@
         <span class="output"></span>
     </form>
 
+    <br><br>
+    <div>
+        <input type="text" class="name" value="Enter yout name"><br>
+        <span class="greet-output"></span>
+    </div>
+
     <script>
+
+        const name = document.querySelector(".name");
+        const greet = document.querySelector(".greet-output");
+
+        name.addEventListener('input', (e) => {
+            e.preventDefault();
+            greet.textContent = name.value;
+        })
+
         const subscribe = document.querySelector('.subscribe');
 
         subscribe.addEventListener("click", () =>{

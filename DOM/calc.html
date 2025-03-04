@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .result{
+            color: black;
+            border: 1px solid red;
+            width: 200px;
+            height: 45px;
+            padding: 10px 5px;
+            border-radius: 13px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h3>Simple Calculator</h3>
+    <div class="result">
+
+    </div>
+    <p>
+        <button class="num1">1</button>
+        <button class="num2">2</button>
+        <button class="num3">3</button>
+    </p>
+    <p>
+        <button class="num4">4</button>
+        <button class="num5">5</button>
+        <button class="num6">6</button>
+    </p>
+    <p>
+        <button class="add">+</button>
+        <button class="minus">-</button>
+        <button class="equal">=</button>
+    </p>
+    <button class="clear">Clear</button>
+    <script>
+
+        let result = document.querySelector('.result');
+
+        const num1 = document.querySelector('.num1');
+        const num2 = document.querySelector('.num2');
+        const num3 = document.querySelector('.num3');
+        const num4 = document.querySelector('.num4');
+        const num5 = document.querySelector('.num5');
+        const num6 = document.querySelector('.num6');
+        const add = document.querySelector('.add');
+        const minus = document.querySelector('.minus');
+        const equal = document.querySelector('.equal');
+        const clear = document.querySelector('.clear');
+
+        num1.addEventListener('click',() =>{
+            result.textContent += '1';
+        })
+        num2.addEventListener('click',() =>{
+            result.textContent += '2';
+        })
+        num3.addEventListener('click',() =>{
+            result.textContent += '3';
+        })
+        num4.addEventListener('click',() =>{
+            result.textContent += '4';
+        })
+        num5.addEventListener('click',() =>{
+            result.textContent += '5';
+        })
+        num6.addEventListener('click',() =>{
+            result.textContent += '6';
+        })
+        add.addEventListener('click',() =>{
+            result.textContent += ' + ';
+        })
+        minus.addEventListener('click',() =>{
+            result.textContent += ' - ';
+        })
+
+        equal.addEventListener('click', () => {
+            result.textContent = eval( result.textContent);
+        })
+
+        clear.addEventListener('click', () =>{
+            result.textContent = '';
+        })
+    </script>
+</body>
+</html>
