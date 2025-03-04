@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6 | Booleans if-satement</title>
+</head>
+<body>
+    <h4>Booleans if-satement Ex.</h4>
+    <p>Coin-flip : guess the result</p>
+
+    <button onclick="
+        const random1 = Math.random();
+        let result1 = '';
+        const guess1 = 'heads';
+
+        if(random1 < 0.5){
+            result1 = 'heads';
+        }else{
+            result1 = 'tails';
+        }
+
+        if(result1 === guess1){
+            alert('You Win!');
+        }else{
+            alert('You Lose!');
+        }
+    ">Heads</button>
+
+    <button onclick="
+        const random2 = Math.random();
+        let result2 = '';
+        const guess2 = 'heads';
+
+        if(random2 < 0.5){
+            result2 = 'heads';
+        }else{
+            result2 = 'tails';
+        }
+
+        if(guess2 === result2){
+            alert('You Win!');
+        }else{
+            alert('You Lose!');
+        }
+    ">Tails</button>
+    <script>
+        
+    </script>
+</body>
+</html>
