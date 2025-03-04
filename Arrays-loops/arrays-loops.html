@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays | Loops </title>
+    <style>
+        .add{
+            background-color: green;
+            padding: 5px 25px;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <form action="">
+        <input type="text" class="list" required>
+        <input type="date" class="date" required>
+        <button class="add" type="submit">Add</button>
+    </form>
+    <div class="container"> 
+        <table class="table-container">
+
+        </table>
+    </div>
+    <script>
+        // Declare an array
+        let todoList = [];
+        const task = document.querySelector('.list');
+        const date = document.querySelector('.date');
+
+        const form = document.querySelector('form');
+        let tableContainer = document.querySelector('.table-container');
+
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+
+            let result = task.value + "  -  " + date.value;
+            // console.log(result);
+            todoList.push(result);
+
+            console.log(todoList);
+            let tableContent = '';
+            // copnsole.log(tableContent);
+            for (let i = 0; i <  todoList.length; i++){
+                tableContent += 
+                    '<tr id="row-'+ i +'""><td>'+ todoList[i]  +'</td><td><button id="delete-'+ i +'"  value="'+ i +'" >DELETE</button></td></tr>';
+            }
+            tableContainer.innerHTML = tableContent;
+        })
+
+        // const suppr = document.querySelector('.delete');
+        // suppr.addEventListener('click', (e) =>{
+        //     e.preventDefault();
+
+        //     const delete_index = Number(suppr.value);
+        //     todoList.splice(delete_index, 1);
+        //     console.log(todoList);
+        // })     
+            
+
+    </script>
+</body>
+</html>
