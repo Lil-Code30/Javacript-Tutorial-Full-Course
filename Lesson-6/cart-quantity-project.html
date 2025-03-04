@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5 | Cart Quantity Project</title>
+</head>
+<body>
+    <h2>Cart Quantity</h2>
+    <button onclick="
+        console.log('Cart Quantity: ' + cartQuantity);
+    ">Show Quantity</button>
+
+    <button onclick="
+        if (cartQuantity + 1 >= 10){
+            alert('The Cart is Full');
+        }else{
+            cartQuantity = cartQuantity + 1;
+            console.log('Cart Quantity: ' + cartQuantity);
+        }
+        
+    ">Add to cart</button>
+
+    <button onclick="
+         if (cartQuantity + 2 >= 10){
+            alert('The Cart is Full');
+        }else{
+            cartQuantity = cartQuantity + 2;
+            console.log('Cart Quantity: ' + cartQuantity);
+        }
+    ">+2</button>
+
+    <button onclick="
+        if (cartQuantity + 3 >= 10){
+            alert('The Cart is Full');
+        }else{
+            cartQuantity = cartQuantity + 3;
+            console.log('Cart Quantity: ' + cartQuantity);
+        }
+    ">+3</button>
+
+    <button onclick="
+        cartQuantity = 0;
+        console.log('Cart reset');
+        console.log('Cart Quantity: ' + cartQuantity);
+    ">Reset Cart</button>
+
+    <script>
+        let cartQuantity = 0;
+    </script>
+</body>
+</html>
