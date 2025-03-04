@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7 | Functions</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <script>
+        console.log(sum(2))
+        function sum(num){
+            let  total = num + num;
+            return total;
+        }
+        
+        const student = {
+            name: 'John',
+            surname: 'Doe',
+            age: 30,
+            role : 'student',
+            getFullname : function(){
+                return this.name +" "+ this.surname;
+                // name + surname
+            }  
+        }
+
+        student.name = 'Loko';
+        console.log(student.name);
+        console.log(student.getFullname());
+    </script>
+</body>
+</html>

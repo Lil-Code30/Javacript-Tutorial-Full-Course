@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Project</title>
+    <style>
+        :root{
+            color-scheme: dark;
+        }
+        span{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h4>YOUTUBE Subscribe Button</h4> 
+    <button class="subscribe">Subscribe</button>
+    <br><br><br>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <form action="">
+        <input type="text" name="order" id="order_amount"> <button type="submit" class="calculate">Calculate</button><br>
+        <span class="output"></span>
+    </form>
+
+    <script>
+        const subscribe = document.querySelector('.subscribe');
+
+        subscribe.addEventListener("click", () =>{
+           alert("Thanks for subscribing!");
+        })
+
+        // const calculate = document.querySelector(".calculate");
+        const form = document.querySelector("form");
+        const output = document.querySelector(".output");
+
+        form.addEventListener('submit',(event) =>{
+            event.preventDefault();
+
+            let order_amount = Number(document.querySelector("#order_amount").value);
+
+            if(order_amount < 40){
+                order_amount = order_amount + 10;
+                output.textContent = "$ " + order_amount;
+            }else{
+                output.textContent = "$ " + order_amount;
+            }
+        })
+
+    </script>
+</body>
+</html>
